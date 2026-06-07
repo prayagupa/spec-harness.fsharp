@@ -1,0 +1,10 @@
+version: "1.0"
+target: src/BillingApp
+entries:
+  - id: readme-documents-invoicing
+    description: README mentions the invoicing sample app
+    category: documentation
+    tags: [smoke]
+    assertion:
+      type: doc-mentions
+      symbol: InvoiceTotals

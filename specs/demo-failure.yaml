@@ -1,0 +1,12 @@
+version: "1.0"
+target: src/BillingApp
+entries:
+  - id: demo-wrong-signature
+    description: Intentional failure demonstrating expected vs actual output
+    category: public-api
+    tags: [demo-only]
+    assertion:
+      type: member-exists
+      typeName: BillingApp.InvoiceTotals
+      memberName: GrandTotal
+      signature: "decimal -> decimal -> int"

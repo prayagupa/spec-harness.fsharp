@@ -1,0 +1,20 @@
+version: "1.0"
+target: src/BillingApp
+entries:
+  - id: invoice-totals-type-exists
+    description: InvoiceTotals module is part of the public API
+    category: public-api
+    tags: [smoke]
+    assertion:
+      type: type-exists
+      typeName: BillingApp.InvoiceTotals
+
+  - id: grand-total-signature
+    description: GrandTotal combines subtotal and tax into a decimal total
+    category: public-api
+    tags: [smoke]
+    assertion:
+      type: member-exists
+      typeName: BillingApp.InvoiceTotals
+      memberName: GrandTotal
+      signature: "decimal -> decimal -> decimal"

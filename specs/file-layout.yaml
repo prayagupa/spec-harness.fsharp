@@ -1,0 +1,18 @@
+version: "1.0"
+target: src/BillingApp
+entries:
+  - id: readme-exists
+    description: Repository documents how to run the harness
+    category: file-layout
+    tags: [docs, smoke]
+    assertion:
+      type: file-exists
+      path: README.md
+
+  - id: library-file-exists
+    description: Invoicing billing app implementation file is present
+    category: file-layout
+    tags: [billing-app, smoke]
+    assertion:
+      type: file-exists
+      path: src/BillingApp/Library.fs

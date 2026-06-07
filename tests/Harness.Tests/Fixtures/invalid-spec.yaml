@@ -1,0 +1,8 @@
+version: "1.0"
+target: src/BillingApp
+entries:
+  - id: bad-assertion
+    description: Missing required assertion fields
+    category: file-layout
+    assertion:
+      type: file-exists
